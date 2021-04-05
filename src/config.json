@@ -1,0 +1,80 @@
+{
+  "name": "SonarScanner-MSBuild",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "imgUrl": "logo.png",
+  "version": "1.0.0",
+  "description": "SonarScanner MSBuild Plugin",
+  "settings": [
+    {
+      "name": "exePath",
+      "viewName": "SonarScanner MSBuild exe Path",
+      "type": "string"
+    },
+    {
+      "name": "hostUrl",
+      "viewName": "Host URL",
+      "type": "string"
+    },
+    {
+      "name": "login",
+      "viewName": "CLI Token",
+      "type": "vault"
+    }
+  ],
+  "methods": [
+    {
+      "name": "execBegin",
+      "viewName": "Begin",
+      "params": [
+        {
+          "name": "projectKey",
+          "viewName": "Project Key",
+          "type": "string"
+        },
+        {
+          "name": "projectPath",
+          "viewName": "Project Path",
+          "type": "string"
+        },
+        {
+          "name": "projectName",
+          "viewName": "Project Name",
+          "type": "string"
+        },
+        {
+          "name": "projectVer",
+          "viewName": "Project Version",
+          "type": "string"
+        },
+        {
+          "name": "hostUrl",
+          "viewName": "Host URL",
+          "type": "string"
+        },
+        {
+          "name": "login",
+          "viewName": "CLI Token",
+          "type": "vault"
+        }
+      ]
+    },
+	    {
+      "name": "execEnd",
+      "viewName": "End",
+      "params": [
+        {
+          "name": "projectPath",
+          "viewName": "Project Path",
+          "type": "string"
+        },
+        {
+          "name": "login",
+          "viewName": "CLI Token",
+          "type": "vault"
+        }
+      ]
+    }
+  ]
+}
