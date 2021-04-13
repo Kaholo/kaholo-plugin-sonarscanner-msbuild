@@ -4,7 +4,7 @@
   "execProgram": "node",
   "main": "app.js",
   "imgUrl": "logo.png",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "SonarScanner MSBuild Plugin",
   "settings": [
     {
@@ -57,6 +57,11 @@
           "name": "login",
           "viewName": "CLI Token",
           "type": "vault"
+        },
+        {
+          "name": "args",
+          "viewName": "Additional Arguments",
+          "type": "text"
         }
       ]
     },
